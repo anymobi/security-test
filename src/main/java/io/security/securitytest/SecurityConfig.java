@@ -10,7 +10,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SecurityConfig {
     @Bean
-    @Order(Ordered.LOWEST_PRECEDENCE)
+    @Order
     public SecurityFilterChain securityFilterChain1(HttpSecurity http) throws Exception {
         http.authorizeRequests().anyRequest().permitAll();
         http.formLogin();
